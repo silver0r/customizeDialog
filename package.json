@@ -1,0 +1,41 @@
+{
+  "name": "customizedialog",
+  "version": "1.0.0",
+  "description": "customize dialog popup using magnific-popup",
+  "main": " ",
+  "scripts": {
+    "test": " "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silver0r/customizeDialog.git"
+  },
+  "keywords": [
+    "dialog",
+    "popup",
+    "magnific-popup"
+  ],
+  "author": {
+    "name": "silver0r",
+    "email": "silver0r@naver.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/silver0r/customizeDialog/issues"
+  },
+  "homepage": "https://github.com/silver0r/customizeDialog#readme",
+  "devDependencies": {
+    "grunt-contrib-connect": "^1.0.2"
+  },
+  "dependencies": {
+    "bower": "^1.8.0",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-uglify": "^3.0.1",
+    "grunt-htmlhint": "^0.9.13",
+    "jit-grunt": "^0.10.0",
+    "time-grunt": "^1.4.0"
+  }
+}

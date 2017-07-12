@@ -1,0 +1,52 @@
+{
+  "name": "customizedialog",
+  "description": "customize dialog popup using magnific-popup",
+  "main": "jquery.customize.dialog.js",
+  "authors": [
+    "silver0r"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "dialog",
+    "popup",
+    "magnific-popup"
+  ],
+  "homepage": "https://github.com/silver0r/customizeDialog",
+  "moduleType": [
+    "globals"
+  ],
+  "dependencies": {
+    "jquery": "1.12.4",
+    "magnific-popup": "^1.1.0",
+    "underscore": "^1.8.3"
+  },
+  "install": {
+    "path": {
+      "js": "js/lib",
+      "css": "js/lib",
+      "png": "js/lib",
+      "gif": "js/lib",
+      "jpg": "js/lib",
+      "svg": "js/lib",
+      "map": "js/lib"
+    },
+    "sources": {
+      "jquery": [
+        "bower_components/jquery/dist/jquery.min.js"
+      ],
+      "underscore": [
+        "bower_components/underscore/underscore-min.js"
+      ],
+      "magnific-popup": {
+        "mapping": [
+          {
+            "bower_components/magnific-popup/dist/jquery.magnific-popup.min.js": "jquery.magnific-popup.min.js"
+          },
+          {
+            "bower_components/magnific-popup/dist/magnific-popup.css": "../../../css/lib/{name}/magnific-popup.css"
+          }
+        ]
+      }
+    }
+  }
+}
