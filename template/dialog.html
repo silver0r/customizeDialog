@@ -1,0 +1,34 @@
+{{
+    var textAlignClass = ''
+    if(options.textAlign === 'left') {
+        textAlignClass = ' al_left';
+    }
+    else if(options.textAlign === 'right') {
+        textAlignClass = ' al_right';
+    }
+    
+	var icon = 'icon_fault03';
+	if(options.type === type.confirm) {
+		icon = 'icon_check02';
+	}
+}}
+<div class="popup_{{=options.type}}">	
+	<div class="popup_cont">
+		<p class="pop_txt {{=textAlignClass}}">{{ if(options.enableIcon) { }}<i class="{{=icon}}"></i>{{ } }}{{=options.message}}</p>	
+		<div class="pop_btn_wrap">
+		{{
+			if(options.type === type.confirm) {
+		}}
+			<a href="javascript:;" id="{{=options.cancelButtonId}}" class="pop_btn multiple_btn">{{=options.cancelText}}</a>
+			<a href="javascript:;" id="{{=options.checkButtonId}}" class="pop_btn multiple_btn">{{=options.checkText}}</a>
+		{{
+			}
+			else {
+		}}
+			<a href="javascript:;" id="{{=options.checkButtonId}}" class="pop_btn">{{=options.checkText}}</a>
+		{{
+			}
+		}}
+		</div>
+	</div>
+</div>

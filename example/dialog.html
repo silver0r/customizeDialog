@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="../css/lib/magnific-popup/magnific-popup.css" />
+<link rel="stylesheet" type="text/css" href="../css/example/example.css" />
+<title>dialog example</title>
+</head>
+<body>
+
+<a href="javascript:;" id="btn_info">Info Dialog</a>
+<a href="javascript:;" id="btn_confirm">Confirm Dialog</a>
+
+<script type="text/javascript" src="../js/lib/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../js/lib/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="../js/lib/underscore/underscore-min.js"></script>
+<script type="text/javascript" src="../js/src/jquery.customize.dialog.js"></script>
+<!--
+<script type="text/javascript" src="../js/dist/jquery.customize.dialog.min.js"></script>
+-->
+<script type="text/javascript">
+function initUnderscore () {
+    if ( typeof _ !== 'undefined' ) {
+        _.templateSettings = {
+            interpolate : /\{\{=([^-][\S\s]+?)\}\}/g,
+            evaluate : /\{\{([^-=][\S\s]+?)\}\}/g,
+            escape : /\{\{-([^=][\S\s]+?)\}\}/g
+        };
+    }
+}
+
+$(function() {
+    var templates = {
+            dialog: '/template/dialog.html'
+    };
+    
+    initUnderscore ();
+    
+    $('#btn_info').on('click', function() {
+        $.customizeDialog ( {
+            template : templates.dialog,
+            message : '알림 메시지입니다.',
+            checkText : '확인',
+            cancelText : '취소',
+            type : 'info'
+        } );
+    });
+    
+    $('#btn_confirm').on('click', function() {
+        $.when ( $.customizeDialog ( {
+            template : templates.dialog,
+            message : '로그아웃 하시겠습니까?',
+            checkText : '확인',
+            cancelText : '취소',
+            type : 'confirm'
+        } ) ).then ( function ( confirm ) {
+            alert ( confirm );
+        } );
+    });
+});
+</script>
+</body>
+</html>
